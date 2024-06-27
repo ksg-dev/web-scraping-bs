@@ -21,9 +21,17 @@ for article_tag in articles:
 article_scores = [int(score.getText().split()[0]) for score in soup.find_all(name="span", class_="score")]
 
 
-print(article_texts)
-print(article_links)
-print(article_scores)
+# print(article_texts)
+# print(article_links)
+# print(article_scores)
+
+highest_score = max(article_scores)
+index_highest = article_scores.index(max(article_scores))
+# print(index_highest)
+
+print(article_texts[index_highest])
+print(article_links[index_highest])
+print(article_scores[index_highest])
 
 
 
