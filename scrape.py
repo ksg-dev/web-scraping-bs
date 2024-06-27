@@ -18,7 +18,7 @@ for article_tag in articles:
     article_links.append(link)
     # print(f"article_link: {link}")
 
-article_scores = [score.getText() for score in soup.find_all(name="span", class_="score")]
+article_scores = [int(score.getText().split()[0]) for score in soup.find_all(name="span", class_="score")]
 
 
 print(article_texts)
