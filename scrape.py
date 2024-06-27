@@ -25,9 +25,9 @@ article_scores = [int(score.getText().split()[0]) for score in soup.find_all(nam
 # print(article_links)
 # print(article_scores)
 
-highest_score = max(article_scores)
+
 index_highest = article_scores.index(max(article_scores))
-# print(index_highest)
+
 
 print(article_texts[index_highest])
 print(article_links[index_highest])
